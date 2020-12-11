@@ -3,7 +3,17 @@ from django.conf import settings
 from django.shortcuts import reverse
 from django_countries.fields import CountryField
 
+
+
 # Create your models here.
+# class User(models.Model):
+#     id =
+#     username
+#     email
+    
+
+#     def __str__(self):
+#         return self.user
 
 class UserProfile(models.Model):
     user = models.OneToOneField(
