@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from django.conf.urls import url
 from core.views import *
+
+
 
 
 urlpatterns = [
@@ -25,4 +27,7 @@ urlpatterns = [
     # path('',TestView.as_view(),name='test')
     path('user-id/', UserProfileView.as_view(), name='user'),
     path('', ItemListView.as_view(), name='product-list'), 
+    path('signup/', signup_view, name="signup"),
+    path('sent/', activation_sent_view, name="activation_sent"),
+    path('activate/<slug:uidb64>/<slug:token>/', activate, name='activate'),
 ]

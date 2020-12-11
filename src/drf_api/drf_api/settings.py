@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'drf_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myshopping',
+        'NAME': 'shop',
         'USER': 'root',
-        'PASSWORD': 'rasha',
+        'PASSWORD': 'imad12345*',
         'PORT': '3306',
         'HOST': '127.0.0.1',
     }
@@ -124,6 +124,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 STATIC_URL = '/static/'
 CORS_ORIGIN_ALLOW_ALL = True
