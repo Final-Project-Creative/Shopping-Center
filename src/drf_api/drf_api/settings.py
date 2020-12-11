@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'drf_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myshopping',
+        'NAME': 'shop',
         'USER': 'root',
-        'PASSWORD': 'rasha',
+        'PASSWORD': '',
         'PORT': '3306',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
     }
 }
 
