@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'drf_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myshopping',
+        'NAME': 'shop',
         'USER': 'root',
-        'PASSWORD': 'rasha',
+        'PASSWORD': '',
         'PORT': '3306',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
     }
 }
 
@@ -131,8 +131,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 CORS_ORIGIN_ALLOW_ALL = True
 
-# CORS_ORIGIN_WHITELIST = (
-#        'http://localhost:3000',
+#  CORS_ORIGIN_WHITELIST = (
+#         'http://localhost:3000',
 # )
 
 REST_FRAMEWORK = {
