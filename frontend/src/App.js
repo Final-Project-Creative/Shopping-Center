@@ -33,20 +33,20 @@ class App extends React.Component {
       currentUser:null
     };
   }
-unsubscribeFromAuth=null
+//unsubscribeFromAuth=null
 
 
-componentDidMount(){
-  this.unsubscribeFromAuth=auth.onAuthStateChanged(async user=>{
-    createUserProfileDocument(user);
-    // this.setState({currentUser:user});
-    console.log(user);
-  })
-}
+// componentDidMount(){
+//   this.unsubscribeFromAuth=auth.onAuthStateChanged(async user=>{
+//     createUserProfileDocument(user);
+//     // this.setState({currentUser:user});
+//     console.log(user);
+//   })
+// }
 
-componentWillUnmount(){
-  this.unsubscribeFromAuth();
-}
+// componentWillUnmount(){
+//   this.unsubscribeFromAuth();
+// }
 
   render(){
     return(
