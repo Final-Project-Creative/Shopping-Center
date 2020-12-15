@@ -3,6 +3,8 @@ import Form from '../form/form.js';
 import Button from '../buttom/buttom.js';
 import {auth,createUserProfileDocument} from '../../firebase/firebase.utils.js';
 import './sign-up.styles.scss';
+// import { connect } from 'react-redux';
+// import { Link, Redirect } from 'react-router-dom';
 
 class SignUp extends React.Component{
     constructor(){
@@ -47,11 +49,15 @@ class SignUp extends React.Component{
       
           this.setState({ [name]: value });
     }
+    
 
 
 
     render(){
         const{displayName,email,password,confirmPassword}=this.state;
+      //   if (this.state.redirect) {
+      //     return <Redirect to="/signin" />
+      // } else {
         return(
             <div className='sign-up'>
                 <h2 className='title'>YOU DON'T HAVE A ACCOUNT?</h2>
@@ -96,4 +102,11 @@ class SignUp extends React.Component{
         )
     }
 }
-export default SignUp;
+
+// const mapStateToProps = (state) => {
+//   return {
+//       colors: state.colors
+//   }
+// }
+// export default SignUp;
+export default (SignUp);

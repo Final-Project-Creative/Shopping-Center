@@ -15,6 +15,8 @@ import SignInandUp from './pages/signIn-signUP/signIn-signUP.js';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import {connect} from 'react-redux';
 import {setCurrentUser} from './redux/user/user.actions';
+import signUP from './Component/sign-up/sign-up';
+import SignIn from './Component/sign-in/sign-in';
 
 
 
@@ -85,7 +87,10 @@ componentWillUnmount(){
         <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/shop' component={ShopPage} />
-        <Route exact path='/SignIn' render={()=>this.props.currentUser ?(<Redirect to='/'/>):(<SignInandUp/>)} />
+        <Route exact path='/signup' component={signUP} />
+        <Route exact path='/SignIn'  render={()=>this.props.currentUser?(<Redirect to='/'/>):(<SignInandUp/>)} />
+
+        {/* <Route exact path='/SignIn' component={SignIn}  /> */}
         </Switch>
         <Footer />
   
